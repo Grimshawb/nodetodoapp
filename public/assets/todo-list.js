@@ -5,6 +5,7 @@ $(document).ready(function(){
       var item = $('form input');
       var todo = {item: item.val()};
 
+      // Add item control
       $.ajax({
         type: 'POST',
         url: '/todo',
@@ -19,6 +20,7 @@ $(document).ready(function(){
 
   });
 
+  // Delete item control
   $('li').on('click', function(){
       var item = $(this).text().replace(/ /g, "-");
       $.ajax({
